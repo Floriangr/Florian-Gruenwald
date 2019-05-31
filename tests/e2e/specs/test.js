@@ -1,8 +1,16 @@
-// https://docs.cypress.io/api/introduction/api.html
+beforeEach(function() {
+  cy.visit("/");
+});
 
-describe("My First Test", () => {
+describe("Entire website", () => {
+  it("Tests the footer links", () => {
+    cy.get(
+      '[href="https://www.linkedin.com/in/florian-gruenwald-4057637a/"]'
+    ).contains("LinkedIn");
+    cy.get('[href="https://github.com/Floriangr"]').contains("Github");
+  });
+
   it("Visits the app root url", () => {
-    cy.visit("/");
-    cy.contains("h1", "Welcome to Your Vue.js App");
+    cy.get("[data-cy=contact]").click();
   });
 });

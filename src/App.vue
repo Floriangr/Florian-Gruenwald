@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-        <font-awesome-icon :icon="['fab', 'linkedin']" size="2x" />
     <router-view />
   </div>
 </template>

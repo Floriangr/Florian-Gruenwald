@@ -27,34 +27,34 @@ export default {
 </script>
 
 <style>
-  * {
+* {
   box-sizing: border-box;
-  }
+}
 
-  .content {
-    min-height: calc(100vh - 398px);
-  }
+.content {
+  min-height: calc(100vh - 398px);
+}
 
-  .row {
+.row {
   display: flex;
   flex-wrap: wrap;
-  }
+}
 
-  .side {
+.side {
   flex: 30%;
   background-color: lightGrey;
   padding: 20px;
-  }
+}
 
-  .main {
+.main {
   flex: 70%;
   background-color: Grey;
   padding: 20px;
-  }
+}
 
-  @media screen and (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .row {
     flex-direction: column;
-    }
   }
+}
 </style>

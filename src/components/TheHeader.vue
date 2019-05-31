@@ -5,19 +5,18 @@
 </template>
 
 <script>
-export default {
-}
+export default {};
 </script>
 
 <style scoped>
-  .header {
+.header {
   padding: 80px;
   text-align: center;
   background: blue;
   color: white;
-  }
+}
 
-  .header h1 {
+.header h1 {
   font-size: 40px;
-  }
+}
 </style>
