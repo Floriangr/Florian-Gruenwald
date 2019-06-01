@@ -19,7 +19,7 @@ export default {};
 .footer {
   height: 75px;
   padding: 20px;
-  background: darkGrey;
+  background: #333;
   text-align: center;
 }
 .footer a {
