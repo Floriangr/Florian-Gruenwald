@@ -3,7 +3,9 @@
     <TheHeader />
     <TheNavBar />
     <div class="row content">
-      <div class="side">...</div>
+      <div class="side">
+        <img src="../assets/Florian_small.jpg" style="width:100%; display:block;" alt="">
+      </div>
       <div class="main">...</div>
     </div>
     <TheFooter />
@@ -43,7 +45,6 @@ export default {
 .side {
   flex: 30%;
   background-color: lightGrey;
-  padding: 20px;
 }
 
 .main {

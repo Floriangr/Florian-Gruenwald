@@ -1,5 +1,6 @@
 <template>
-  <div class="header">
+  <div class="image">
+    <img src="../assets/header.jpg" alt="">
     <h1>Welcome to my world!</h1>
   </div>
 </template>
@@ -9,14 +10,20 @@ export default {};
 </script>
 
 <style scoped>
-.header {
-  padding: 80px;
-  text-align: center;
-  background: blue;
-  color: white;
+.image {
+  position: relative;
 }
 
-.header h1 {
-  font-size: 40px;
+.image img {
+  width:100%;
+  display: block;
+  max-height: 20vw;
+}
+
+.image h1 {
+  font-size: 6vw;
+  position: absolute;
+  top: 10%;
+  color: orange;
 }
 </style>
