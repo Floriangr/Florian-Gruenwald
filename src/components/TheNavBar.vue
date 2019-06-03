@@ -1,7 +1,8 @@
 <template>
   <div class="navbar">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about" data-cy="contact">Contact me</router-link>
+    <router-link to="/" data-cy="home">Home</router-link> 
+    <router-link to="/cv" data-cy="cv">C.V.</router-link>
+    <router-link to="/contact" data-cy="contact">Contact me</router-link>
     <a href="#" class="right">Login</a>
   </div>
 </template>
