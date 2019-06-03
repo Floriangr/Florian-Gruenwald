@@ -17,7 +17,8 @@
     "i": "^0.3.6",
     "npm": "^6.9.0",
     "vue": "^2.6.10",
-    "vue-router": "^3.0.3"
+    "vue-router": "^3.0.3",
+    "vue-tweet-embed": "^2.3.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.8.0",
