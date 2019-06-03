@@ -7,11 +7,13 @@
         <img src="../assets/Florian_small.jpg" style="width:100%; display:block;" alt="">
       </div>
       <div class="main">
-        <h2>
-          I'm passionate about creating impactful digital products users love <br>
-          I currently work for E.ON, as a Product Owner for the eon.com website <br>
-          In my free-time I enjoy programming, windsurfing and playing improv theater <br> <br>
-        </h2>
+        <div class="container">
+          <h2>
+            I'm passionate about creating impactful digital products users love <br>
+            I currently work for E.ON, as a Product Owner for the eon.com website <br>
+            In my free-time I enjoy programming, windsurfing and playing improv theater <br> <br>
+          </h2>
+        </div>
         <Tweet id="1117064644454227970" style="display: inline-block"><div class="spinner"></div></Tweet>
       </div>
     </div>
@@ -43,17 +45,21 @@ export default {
   box-sizing: border-box;
 }
 
+.container {
+  min-height: 170px;
+}
+
 .main h2 {
   font-size: 1vw;
   line-height: 2;
   font-style: italic;
   color: black;
   font-family: "Courier New", Times, serif;
-  transition: 1s;
+  transition: 0.5s ease-out;
 }
 
 .main h2:hover {
-  font-size: 1.1vw;
+  transform: scale(1.1);
 }
 
 .pageContent {
