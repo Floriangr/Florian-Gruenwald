@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import CV from "./views/CV.vue";
+import Login from "./views/Login.vue"
 
 Vue.use(Router);
 
@@ -18,6 +19,11 @@ export default new Router({
       path: "/cv",
       name: "CV",
       component: CV
+    },
+    {
+      path: "/login",
+      name: "Login",
+      component: Login
     },
     {
       path: "/contact",

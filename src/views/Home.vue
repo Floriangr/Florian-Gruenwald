@@ -1,7 +1,5 @@
 <template>
   <div class="home">
-    <TheHeader />
-    <TheNavBar />
     <div class="row pageContent">
       <div class="side">
         <img
@@ -22,12 +20,11 @@
             <br />
           </h2>
         </div>
-        <Tweet id="1117064644454227970" style="display: inline-block"
+        <Tweet id="1117064644454227970" class="tweet"
           ><div class="spinner"></div
         ></Tweet>
       </div>
     </div>
-    <TheFooter />
   </div>
 </template>
 
@@ -101,14 +98,30 @@ export default {
 
 .main {
   flex: 70%;
+  max-width: 100%;
   background-color: Grey;
   padding: 20px;
   text-align: center;
+}
+
+.tweet {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
 
 @media screen and (max-width: 700px) {
   .row {
     flex-direction: column;
   }
+
+  .tweet {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
 }
 </style>

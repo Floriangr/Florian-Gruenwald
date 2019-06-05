@@ -1,7 +1,4 @@
 <template lang="html">
-  <div>
-    <TheHeader />
-    <TheNavBar />
     <div class="main timeline">
      <div class="container left">
        <div class="content">
@@ -32,8 +29,6 @@
        </div>
      </div>
     </div>
-    <TheFooter />
-  </div>
 </template>
 
 <script>
