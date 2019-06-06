@@ -1,6 +1,6 @@
 <template>
   <div class="image">
-    <img src="../assets/header.jpg" alt="" />
+    <img src="../assets/header.jpg" alt="header" />
     <div class="content">
       <h1>Florian Gruenwald</h1>
       <h2><i>Product & team builder</i></h2>
@@ -63,5 +63,20 @@ export default {};
 
 .content h2 {
   font-size: 2vw;
+}
+
+@media screen and (max-width: 700px) {
+  .content h1 {
+    font-size: 6vw;
+  }
+  .content h2 {
+    font-size: 4vw;
+  }
+  .content button {
+    font-size: 2vw;
+  }
+  .image img {
+    max-height: 40vw;
+  }
 }
 </style>

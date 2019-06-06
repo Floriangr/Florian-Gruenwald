@@ -108,7 +108,9 @@ export default {
   .row {
     flex-direction: column;
   }
-
+  .main h2 {
+    font-size: 4vw;
+  }
   .tweet {
     display: block;
     margin-left: auto;
