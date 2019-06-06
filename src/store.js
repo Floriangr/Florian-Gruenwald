@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import axios from "axios";
+import router from "./router";
 
 Vue.use(Vuex);
 
@@ -13,6 +14,12 @@ export default new Vuex.Store({
     authUser(state, userData) {
       state.userId = userData.userId;
       state.token = userData.token;
+    },
+    logoutUser(state) {
+      state.userId = null;
+      state.token = null;
+      console.log("token after logout", state.token)
+      router.replace('/');
     }
   },
   actions: {
@@ -34,6 +41,9 @@ export default new Vuex.Store({
           console.log(res);
         })
         .catch(e => console.log(e));
+    },
+    logout({ commit }) {
+      commit('logoutUser')
     }
   },
   getters: {}
