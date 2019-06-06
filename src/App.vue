@@ -30,14 +30,14 @@ export default {
 }
 
 .content-wrap {
-  padding-bottom: 5rem;    /* Footer height */
+  padding-bottom: 5rem; /* Footer height */
 }
 
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 5rem;            /* Footer height */
+  height: 5rem; /* Footer height */
 }
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;

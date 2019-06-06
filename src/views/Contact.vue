@@ -12,25 +12,10 @@
   </div>
 </template>
 
-<script>
-import TheHeader from "@/components/TheHeader.vue";
-import TheNavBar from "@/components/TheNavBar.vue";
-import TheFooter from "@/components/TheFooter.vue";
-
-export default {
-  name: "home",
-  components: {
-    TheHeader,
-    TheNavBar,
-    TheFooter
-  }
-};
-</script>
-
 <style lang="css" scoped>
-  .iframe {
-    margin-top: 10px;
-    width: 50vw;
-    height: 30vw
-  }
+.iframe {
+  margin-top: 10px;
+  width: 50vw;
+  height: 30vw
+}
 </style>

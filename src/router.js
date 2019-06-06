@@ -1,8 +1,11 @@
 import Vue from "vue";
 import Router from "vue-router";
+import store from "./store";
+
 import Home from "./views/Home.vue";
 import CV from "./views/CV.vue";
-import Login from "./views/Login.vue"
+import Login from "./views/Login.vue";
+
 
 Vue.use(Router);
 
@@ -18,7 +21,16 @@ export default new Router({
     {
       path: "/cv",
       name: "CV",
-      component: CV
+      component: CV,
+      beforeEnter(to, from, next) {
+        if (!store.state.token) {
+          alert("Please sign in first")
+          next('/login')
+        }
+        else {
+          next();
+        }
+      }
     },
     {
       path: "/login",

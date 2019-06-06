@@ -29,18 +29,11 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import TheHeader from "@/components/TheHeader.vue";
-import TheNavBar from "@/components/TheNavBar.vue";
-import TheFooter from "@/components/TheFooter.vue";
 import { Tweet } from "vue-tweet-embed";
 
 export default {
   name: "home",
   components: {
-    TheHeader,
-    TheNavBar,
-    TheFooter,
     Tweet
   }
 };
@@ -122,6 +115,5 @@ export default {
     margin-right: auto;
     width: 90%;
   }
-
 }
 </style>

@@ -32,17 +32,8 @@
 </template>
 
 <script>
-  import TheHeader from "@/components/TheHeader.vue";
-  import TheNavBar from "@/components/TheNavBar.vue";
-  import TheFooter from "@/components/TheFooter.vue";
-
   export default {
-    name: "home",
-    components: {
-      TheHeader,
-      TheNavBar,
-      TheFooter
-    }
+
   };
 </script>
 
