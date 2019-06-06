@@ -18,12 +18,18 @@ export default new Vuex.Store({
     logoutUser(state) {
       state.userId = null;
       state.token = null;
-      console.log("token after logout", state.token)
+      localStorage.removeItem('userId');
+      localStorage.removeItem('token');
+      localStorage.removeItem('tokenExpiration');
       router.replace('/');
     }
   },
   actions: {
-    login({ commit }, authData) {
+    setAutoLogout({ commit }, timeLimit) {
+      console.log('timelimit',timeLimit)
+      setTimeout(() => commit('logoutUser'),timeLimit * 1000);
+    },
+    login({ commit, dispatch }, authData) {
       axios
         .post(
           "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDyCHMtZzHzpR3xw-pKxTjY-xEQSy4VcdI",
@@ -38,12 +44,27 @@ export default new Vuex.Store({
             token: res.data.idToken,
             userId: res.data.localId
           });
-          console.log(res);
+          const now = new Date();
+          const tokenExpiration = new Date(now.getTime() + res.data.expiresIn * 1000);
+          dispatch('setAutoLogout', res.data.expiresIn);
+          localStorage.setItem('userId', res.data.localId);
+          localStorage.setItem('token', res.data.idToken);
+          localStorage.setItem('tokenExpiration', tokenExpiration);
         })
         .catch(e => console.log(e));
     },
     logout({ commit }) {
       commit('logoutUser')
+    },
+    autoLogin({ commit, dispatch }) {
+      const now = new Date();
+      if (localStorage.getItem('token') ) {
+        commit('authUser', {
+          token: localStorage.getItem('token'),
+          userId: localStorage.getItem('userId')
+        })
+        dispatch('setAutoLogout', (new Date(localStorage.getItem('tokenExpiration')) - now) / 1000);
+      }
     }
   },
   getters: {}
